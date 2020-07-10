@@ -1,0 +1,7 @@
+.reg {
+    border-radius: 7px;
+    border: 2px solid black;
+    padding: 1em;
+    text-align-last: center;
+    background-color: yellow;
+}

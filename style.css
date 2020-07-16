@@ -1,7 +1,9 @@
-.reg {
+.reg li {
     border-radius: 7px;
     border: 2px solid black;
     padding: 1em;
     text-align-last: center;
     background-color: yellow;
+    font-size: xx-small;
+    margin-bottom: 1em;
 }

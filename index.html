@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <div class="container">
 
@@ -17,32 +19,52 @@
             </div>
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-12">
                 <label for="">Registration Numbers:</label>
             </div>
         </div>
         <div class="row">
-             <div class="col-12">
+            <div class="col-12">
                 <input type="text" name="" value="" placeholder="enter 'Registration'" class="enterReg">
-
-             </div>   
+            </div>
         </div>
 
         <div class="col-12">
-            <button class="button-primary addBtn" on type="button" name="button">Add</button>
-            
-        </div> -->
+            <button class="addBtn" type="button" value="button">Add</button>
 
-<div class="row">
-    <div class="col-2">
-       <div class="reg">CA 12345</div> 
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="filter">
+                    <b>Filter by town</b>
+                    <input type="radio" name="town" class="radioBtn" value="">show all
+                <input type="radio" name="town" class="radioBtn" value="CK">Malmesbury
+                <input type="radio" name="town" class="radioBtn" value="CY">Bellville
+                <input type="radio" name="town" class="radioBtn" value="CA">Cape Town
+            </div>
+            </div>
+
+        
+        <div class="col-12">
+            <button class="showBtn" type="button" value="button">Show</button>
+
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <ul class="reg">
+                    <li>CA 12345</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 
     </div>
 </body>
 
-<script src="registration-number.js" charset="utf-8"></script>
 <script src="reg-number-fac.js" charset="utf-8"></script>
+<script src="registration-number.js" charset="utf-8"></script>
+
 </html>

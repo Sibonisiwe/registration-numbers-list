@@ -1,24 +1,53 @@
-const addButton = document.querySelector(".addBtn");
+const addListBtn = document.querySelector(".addBtn");
+const showListBtn = document.querySelector(".showBtn");
 const enterReg = document.querySelector(".enterReg");
-const radioBtnElem = document.querySelector(".radioBtn");
+const radioBtn = document.querySelector(".radioBtn");
+const list = document.querySelector(".reg");
 
 const regInstance = Registrations();
 
+// function addReg(display) {
+//     var li = document.createElement("li");
+//     li.innerHTML = display;
+//     list.insertBefore(li,list.childNodes[0]);
+
+// }
+
 function addBtnClicked() {
-    const regList = document.querySelector(".reg");
+
+    //list.innerHTML = regInstance.addRegistrations(enterReg.value);
+    
+    var loopOver = regInstance.addRegistrations(enterReg.value);
+    alert(loopOver);
+    var li = document.createElement("li");
+
+    for (var i=0; i<loopOver.length; i++) {
+        //addReg(loopOver[i]);
+        li.innerHTML = loopOver[i]
+        list.appendChild(li);
+    }
+        
+}
+
+function showListBtnClicked(list) {
+    list.innerHTML = ""
+    alert(list.innerHTML = "");
 
     var li = document.createElement("li");
-    //li.innerHTML = enterReg.value;
-    li.innerHTML = regInstance.addRegistrations(enterReg.value);
-    regList.appendChild(li);
 
     var checkedRadio = document.querySelector(".radioBtn:checked");
+        var filterLoop = regInstance.filter(checkedRadio.value);
 
-    radioBtnElem.innerHTML = regInstance.filter(checkedRadio, enterReg);
+    for (var i=0; i<filterLoop.length;i++) {
+        const items = filterLoop[i];
 
+        li.innerHTML = items;
+        list.appendChild(li);
+        
+    }
 
-   
 }
 
 
-addButton.addEventListener("click", addBtnClicked);
+addListBtn.addEventListener("click", addBtnClicked);
+showListBtn.addEventListener("click", showListBtnClicked);
